@@ -1,7 +1,8 @@
 "use client"
 
 import React from "react";
-import { Logo, WaitlistForm, SocialLinks } from "@/components/waitlist";
+import { WaitlistForm, SocialLinks } from "@/components";
+import Logo from "@/components/waitlist/Logo";
 
 import Image from "next/image";
 
@@ -15,7 +16,7 @@ const Index: React.FC = () => {
       />
 
 
-      <main className="bg-[rgba(23,21,24,1)] overflow-hidden rounded-[20px] h-[100vh] w-full">
+      <main className="bg-[rgba(23,21,24,1)] overflow-hidden rounded-[5px] h-[100vh] w-full">
         <section className="flex flex-col relative min-h-[100vh] w-full items-center justify-center px-20 py-[84px] max-md:max-w-full max-md:px-5">
           <Image
             width={1011}

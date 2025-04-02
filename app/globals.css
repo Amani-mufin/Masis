@@ -4,6 +4,7 @@
 
 
 
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -171,45 +172,7 @@
 }
 
 
-/* .glass-container {
- 
-  position: relative;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  -webkit-backdrop-filter: blur(31.7px);
-  backdrop-filter: blur(31.7px);
-  -webkit-backdrop-filter: blur(31.7px);
-  backdrop-filter: blur(31.7px);
-  border: 2px solid;
-  border-image: linear-gradient(
-      107deg,
-      #5a5a5a 15%,
-      #fff 25%,
-      #474747 34%,
-      #474747 53%,
-      #fff 64%,
-      #5f5e5e 72%,
-      #fff 89%,
-      #989898 95%
-    )
-    1;
-    border-radius: 23px !important;
-    outline: 2px solid transparent;
-    outline-offset: -20px;
-    box-shadow: 0 0 0 2px 
-      linear-gradient(
-        107deg,
-        #5a5a5a 15%,
-        #fff 25%,
-        #474747 34%,
-        #474747 53%,
-        #fff 64%,
-        #5f5e5e 72%,
-        #fff 89%,
-        #989898 95%
-      );
 
-} */
 
 .glass-container {
   position: relative;
@@ -242,4 +205,43 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
+}
+
+.modal-border {
+  position: relative;
+  border-radius: 16px;
+  background: #0E0927;
+}
+
+.modal-border::after {
+  content: "";
+  position: absolute;
+  inset: -1.38px;
+  padding: 1.38px;
+  background: linear-gradient(
+    116.76deg,
+    #5A5A5A 13.99%,
+    #FFFFFF 23.92%,
+    #474747 33.16%,
+    #474747 52.23%,
+    #FFFFFF 62.8%,
+    #5F5E5E 70.76%,
+    #FFFFFF 87.77%,
+    #989898 93.77%
+  );
+  border-radius: 16px;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.rubik-glitch-regular {
+  font-family: "Rubik Glitch", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }

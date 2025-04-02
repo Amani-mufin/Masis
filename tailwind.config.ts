@@ -18,6 +18,10 @@ module.exports = {
       }
     },
     extend: {
+      fontFamily: {
+        'rubik-glitch': ['var(--font-rubik-glitch)', 'sans-serif'],
+        'rubik-iso': ['var(--font-rubik-iso)', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
