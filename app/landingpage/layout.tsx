@@ -10,7 +10,6 @@ import { Weight } from "lucide-react";
 
 
 
-
 const rubikGlitch = Rubik_Glitch({
   subsets: ['latin'],
   weight: '400',

@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import React, { useState } from "react";
@@ -10,6 +8,27 @@ const WaitlistForm: React.FC = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showModal, setShowModal] = useState(false);
+
+  const saveEmailToCSV = async (email: string) => {
+    const timestamp = new Date().toISOString();
+
+    try {
+      const response = await fetch('/api/save-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, timestamp }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to save email');
+      }
+    } catch (error) {
+      console.error('Error saving email:', error);
+      throw error;
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,13 +43,10 @@ const WaitlistForm: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
+      await saveEmailToCSV(email);
       toast.success("Thank you for joining our waitlist!");
-      setShowModal(true); // Show success modal
+      setShowModal(true);
 
-      // Hide modal after 3 seconds
       setTimeout(() => {
         setShowModal(false);
       }, 3000);
@@ -38,7 +54,7 @@ const WaitlistForm: React.FC = () => {
       toast.error("Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);
-      setEmail(""); // Clear input field
+      setEmail("");
     }
   };
 
@@ -81,7 +97,9 @@ const WaitlistForm: React.FC = () => {
           </div>
         </div>
       </div>
-      {showModal && (
+
+
+      {typeof window !== "undefined" && showModal && (
         <div
           className="modal-border absolute z-50 -top-8 left-1/2 transform -translate-x-1/2 mt-2 w-[268px] h-[50px] md:w-[569px] md:h-[126px] text-white flex items-center justify-center text-[15px] font-medium text-center px-6 transition-opacity duration-500 ease-in-out opacity-100 backdrop-blur-[31.7px]"
         >
@@ -95,3 +113,6 @@ const WaitlistForm: React.FC = () => {
 };
 
 export default WaitlistForm;
+
+
+

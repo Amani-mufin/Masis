@@ -7,7 +7,7 @@ const HeroSection: React.FC = () => {
         <h2 className="text-[84px] leading-tight text-center text-violet-100 max-md:text-6xl max-sm:text-4xl font-['Rubik_Glitch']">
           CONNECT WITH EVERY EXISTING
         </h2>
-        <div className="leading-none text-violet-100 text-[275px] max-md:text-[200px] max-sm:text-9xl font-[var(--font-rubik-iso)]">
+        <div className="leading-none text-violet-100 text-[275px] max-md:text-[200px] max-sm:text-9xl font-['Rubik_Iso']">
           AI
         </div>
       </div>
