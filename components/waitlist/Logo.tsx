@@ -7,7 +7,7 @@ const Logo: React.FC = () => {
         <div className="bg-[#512B9E] self-stretch md:min-h-[47px] min-h-[22px] md:text-3xl text-sm text-white font-normal tracking-[0.3px] w-12 my-auto px-2 md:px-2.5 py-1 rounded-[9px] font-[silkscreen]">
           M
         </div>
-        <div className="text-[#5F0F76]  text-[14px] md:text-[25px] font-bold self-stretch my-auto">
+        <div className="text-[#5F0F76] text-[14px] md:text-[25px] font-bold self-stretch my-auto">
           MASIS
         </div>
       </div>

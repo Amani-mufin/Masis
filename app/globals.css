@@ -18,9 +18,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -29,6 +31,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -186,11 +189,12 @@
 .glass-container::after {
   content: "";
   position: absolute;
-  inset: -2px; /* Expands the outline outward */
-  border-radius: 23px; /* Ensures the outline follows the border shape */
+  inset: -2px;
+  /* Expands the outline outward */
+  border-radius: 23px;
+  /* Ensures the outline follows the border shape */
   padding: 2px;
-  background: linear-gradient(
-      107deg,
+  background: linear-gradient(107deg,
       #5a5a5a 15%,
       #fff 25%,
       #474747 34%,
@@ -198,8 +202,7 @@
       #fff 64%,
       #5f5e5e 72%,
       #fff 89%,
-      #989898 95%
-    );
+      #989898 95%);
   -webkit-mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
   mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
   -webkit-mask-composite: xor;
@@ -218,23 +221,21 @@
   position: absolute;
   inset: -1.38px;
   padding: 1.38px;
-  background: linear-gradient(
-    116.76deg,
-    #5A5A5A 13.99%,
-    #FFFFFF 23.92%,
-    #474747 33.16%,
-    #474747 52.23%,
-    #FFFFFF 62.8%,
-    #5F5E5E 70.76%,
-    #FFFFFF 87.77%,
-    #989898 93.77%
-  );
+  background: linear-gradient(116.76deg,
+      #5A5A5A 13.99%,
+      #FFFFFF 23.92%,
+      #474747 33.16%,
+      #474747 52.23%,
+      #FFFFFF 62.8%,
+      #5F5E5E 70.76%,
+      #FFFFFF 87.77%,
+      #989898 93.77%);
   border-radius: 16px;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
+  mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -244,4 +245,10 @@
   font-family: "Rubik Glitch", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+
+/* Apply the custom shadow for top and right side only */
+.shadow-custom {
+  box-shadow: 8px -8px 40px  rgba(0, 0, 0, 0.1); /* 8px to the right and top with a blur */
 }

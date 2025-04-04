@@ -63,7 +63,7 @@ const WaitlistForm: React.FC = () => {
       <div className="glass-container bg-[rgba(255,255,255,0.08)] flex min-h-[303px] w-full flex-col items-start text-center justify-start gap-[10px] px-[117px] py-[38px] rounded-[23px] border-2 border-solid border-transparent border-image-[linear-gradient(107deg,#5a5a5a_15%,#fff_25%,#474747_34%,#474747_53%,#fff_64%,#5f5e5e_72%,#fff_89%,#989898_95%)_1] backdrop-blur-[31.7px] max-md:max-w-full max-md:px-5">
         <div className="flex max-w-full w-[754px] flex-col items-stretch mx-auto">
           <div className="w-full text-[rgba(217,217,217,1)] max-md:max-w-full">
-            <h2 className="text-[40px] font-bold max-md:max-w-full">
+            <h2 className=" text-base md:text-[40px] font-bold max-md:max-w-full">
               Join our waitlist!
             </h2>
             <p className="text-xl font-medium mt-3 max-md:max-w-full">

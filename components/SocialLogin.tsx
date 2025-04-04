@@ -1,12 +1,16 @@
 import React from "react";
 
-export const SocialLogin: React.FC = () => {
+interface SocialLoginProps {
+  isSignIn?: boolean; // Optional prop to determine the text
+}
+
+export const SocialLogin: React.FC<SocialLoginProps> = ({ isSignIn }) => {
   return (
     <div className="flex flex-col items-center gap-[30px] w-full">
       <div className="w-full relative flex items-center justify-center">
         <div className="w-[157px] h-px bg-[#E6E6E6]" />
         <div className="text-[#989898] text-[13px] font-[roboto] font-normal mx-[17px] my-0">
-          Or Sign Up with
+          {isSignIn ? 'Or Sign In  With' : 'Or Sign Up with'}
         </div>
         <div className="w-[157px] h-px bg-[#E6E6E6]" />
       </div>
@@ -39,3 +43,5 @@ export const SocialLogin: React.FC = () => {
     </div>
   );
 };
+
+export default SocialLogin

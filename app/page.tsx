@@ -16,7 +16,7 @@ const Index: React.FC = () => {
       />
 
 
-      <main className="bg-[rgba(23,21,24,1)] overflow-hidden rounded-[5px] h-[100vh] w-full">
+      <main className="bg-[rgba(23,21,24,1)] overflow-hidden  h-[100vh] w-full">
         <section className="flex flex-col relative min-h-[100vh] w-full items-center justify-center px-20 py-[84px] max-md:max-w-full max-md:px-5">
           <Image
             width={1011}
