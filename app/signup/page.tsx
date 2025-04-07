@@ -9,7 +9,7 @@ import { SignUpForm } from "@/components/SignUpForm";
 const SignUp = () => {
   return (
     <div className="min-h-screen w-full flex h-[100vh]">
-      <div className="relative hidden md:flex md:w-1/2 items-center justify-center">
+      <div className="relative min-h-screen hidden md:flex md:w-1/2 items-center justify-center">
         <Image
           src="/signup_img.png"
           alt="Sign Up"

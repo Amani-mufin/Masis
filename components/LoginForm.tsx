@@ -80,10 +80,10 @@ const LoginForm: React.FC = () => {
       className="flex flex-col items-center gap-[45px] w-full max-w-[445px] mx-auto"
     >
       <div className="flex flex-col items-center gap-[5px] w-full">
-        <h1 className="text-black text-center text-[32px] max-sm:text-[28px]">
+        <h1 className="text-black text-center md:text-[32px] text-[14px] max-sm:text-[28px]">
           Log In
         </h1>
-        <p className="text-[#727272] text-center text-xl max-sm:text-lg">
+        <p className="text-[#727272] text-center text-[12px] md:text-xl max-sm:text-lg">
           Fill in the spaces to Continue
         </p>
       </div>
