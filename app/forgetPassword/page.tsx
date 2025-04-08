@@ -2,7 +2,6 @@
 
 import { Logo } from '@/components'
 import Image from 'next/image'
-import LoginForm from '@/components/LoginForm';
 import { useState } from 'react';
 import "../globals.css"
 import InputField from '@/components/InputField';
@@ -59,9 +58,7 @@ const ChangePassword = () => {
             </p>
           </div>
         </div>
-
       </div>
-
       <div className="flex flex-col justify-center relative gap-[50px] items-center w-full md:w-1/2 bg-gray-50 mt-2 py-0 md:px-4 sm:px-6">
         <div className='text-[#512B9E] text-[10px] md:text-[16px] text-right absolute self-end right-[5px] md:right-[67px] top-10 cursor-pointer font-medium'><Link href="/signup">Create  Account</Link></div>
         <div className="w-full flex  items-center justify-center  md:h-[924px] my-[20px] px-[44px] py-6 bg-white shadow-custom">

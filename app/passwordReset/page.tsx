@@ -7,9 +7,11 @@ import "../globals.css"
 import Link from 'next/link';
 import PasswordResetForm from '@/components/PasswordResetForm';
 
+import { useForm, FormProvider } from "react-hook-form";
+
 
 const PasswordReset = () => {
-
+  const methods = useForm();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,36 +39,37 @@ const PasswordReset = () => {
     </svg>
   );
   return (
-    <div className="min-h-screen w-full flex flex-col md:flex-row h-[100vh] overflow-x-hidden">
-
-      <div className="relative min-h-[400px] md:min-h-screen md:w-1/2 order-first md:order-last">
-        <Image
-          src="/forget_passwordImg.png"
-          alt="Log In"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute top-[10px] left-[50%] transform -translate-x-1/2 flex gap-[190px] flex-col items-center justify-center w-full px-4">
-          <Logo />
-          <div className="flex flex-col md:gap-[30px] mt-10 md:mt-0 md:absolute md:top-[500px] md:left-[50%] md:transform md:-translate-x-1/2 md:w-[600px] text-white">
-            <h2 className="text-[32px] md:text-[84px] font-bold leading-[92%] text-left">
-            Reconnect the AI mag!c
-            </h2>
-            <p className="text-[10px] md:text-[22px] font-medium text-left">
-              Lorem ipsum dolor sit amet consectetur. Morbi sit et ut venenatis tortor vel.
-            </p>
+    <FormProvider {...methods}>
+      <div className="min-h-screen w-full flex flex-col md:flex-row h-[100vh] overflow-x-hidden">
+        <div className="relative min-h-[400px] md:min-h-screen md:w-1/2 order-first md:order-last">
+          <Image
+            src="/forget_passwordImg.png"
+            alt="Log In"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute top-[10px] left-[50%] transform -translate-x-1/2 flex gap-[190px] flex-col items-center justify-center w-full px-4">
+            <Logo />
+            <div className="flex flex-col md:gap-[30px] mt-10 md:mt-0 md:absolute md:top-[500px] md:left-[50%] md:transform md:-translate-x-1/2 md:w-[600px] text-white">
+              <h2 className="text-[32px] md:text-[84px] font-bold leading-[92%] text-left">
+                Reconnect the AI mag!c
+              </h2>
+              <p className="text-[10px] md:text-[22px] font-medium text-left">
+                Lorem ipsum dolor sit amet consectetur. Morbi sit et ut venenatis tortor vel.
+              </p>
+            </div>
           </div>
         </div>
+        <div className="flex flex-col justify-center relative gap-[50px] items-center w-full md:w-1/2 bg-gray-50 mt-2 py-0 md:px-4 px-6 shadow-lg">
+          <div className='text-[#512B9E] text-[10px] md:text-[16px] text-right absolute self-end right-[5px] md:right-[67px] top-10 cursor-pointer font-medium'><Link href="/signup">Create  Account</Link></div>
 
-      </div>
+          <PasswordResetForm />
 
-      <div className="flex flex-col justify-center relative gap-[50px] items-center w-full md:w-1/2 bg-gray-50 mt-2 py-0 md:px-4 sm:px-6">
-        <div className='text-[#512B9E] text-[10px] md:text-[16px] text-right absolute self-end right-[5px] md:right-[67px] top-10 cursor-pointer font-medium'><Link href="/signup">Create  Account</Link></div>
-      
-        <PasswordResetForm />
+
+        </div>
       </div>
-    </div>
+    </FormProvider>
   );
 }
 

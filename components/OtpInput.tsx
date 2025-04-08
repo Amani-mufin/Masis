@@ -87,7 +87,7 @@ const OtpInput: React.FC<OtpInputProps> = ({ length = 4, onComplete }) => {
       {Array.from({ length }, (_, index) => (
         <div
           key={index}
-          className="flex items-center justify-center text-5xl text-[#131212] w-[87px] h-[87px] bg-white rounded-[6.96px] border-[1.74px] border-[#6A1183] max-sm:text-4xl max-sm:w-[70px] max-sm:h-[70px]"
+          className="flex items-center justify-center text-5xl text-[#131212] h-[50px] w-[50px] md:w-[87px] md:h-[87px] bg-white rounded-[6.96px] border-[1.74px] border-[#6A1183] max-sm:text-4xl max-sm:w-[70px] max-sm:h-[70px]"
         >
           <input
             ref={(el) => {
@@ -101,7 +101,7 @@ const OtpInput: React.FC<OtpInputProps> = ({ length = 4, onComplete }) => {
             onChange={(e) => handleChange(e, index)}
             onKeyDown={(e) => handleKeyDown(e, index)}
             onPaste={index === 0 ? handlePaste : undefined}
-            className="w-full h-full text-center bg-transparent outline-none"
+            className="md:w-full md:h-full w-[50px] h-[50px] text-center bg-transparent outline-none"
             aria-label={`OTP digit ${index + 1}`}
           />
         </div>

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import OtpInput from "./OtpInput";
+import "@/app/globals.css";
 
 interface PasswordResetFormProps {
   email?: string;
@@ -60,12 +61,12 @@ const PasswordResetForm: React.FC<PasswordResetFormProps> = ({
   };
 
   return (
-    <div className="flex flex-col items-center gap-2 w-full max-w-[445px]">
+    <div className="flex flex-col justify-center mt-[60px] md:mt-0 items-center gap-2 w-full md:max-w-[780px]  h-full shadow-custom">
       <header>
-        <h1 className="text-[32px] text-[#131212] text-center font-medium">
+        <h1 className="md:text-[32px] text-[18px] text-[#131212] text-center font-medium">
           Password reset
         </h1>
-        <p className="text-lg text-center">
+        <p className=" text-[10px]  md:text-lg text-center">
           <span className="text-[#727272]">We sent an OTP to </span>
           <span className="text-[#131212]">{email}</span>
         </p>
@@ -73,7 +74,7 @@ const PasswordResetForm: React.FC<PasswordResetFormProps> = ({
 
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col items-center gap-8 w-full max-w-[445px] mt-[51px]"
+        className="flex flex-col items-center gap-8 w-full max-w-[445px] mt-2 md:mt-[51px]"
       >
         <div className="flex flex-col items-center gap-10 w-full">
           <OtpInput length={4} onComplete={handleOtpComplete} />
@@ -81,7 +82,7 @@ const PasswordResetForm: React.FC<PasswordResetFormProps> = ({
           <button
             type="submit"
             disabled={isSubmitting || otp.length !== 4}
-            className="flex items-center justify-center text-[#FEFEFE] text-[15px] h-[58px] w-full bg-[linear-gradient(180deg,#512B9E_0%,#44126A_100%)] rounded-[4.627px] cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+            className="flex items-center justify-center text-[#FEFEFE] w-[340px] text-[15px]  h-[36px] md:h-[58px] md:w-full bg-[linear-gradient(180deg,#512B9E_0%,#44126A_100%)] rounded-[4.627px] cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
           >
             {isSubmitting ? "Processing..." : "Reset password"}
           </button>
